@@ -1,0 +1,12 @@
+{
+  "name": "cet6-word-review",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline Excel vocabulary flashcards with review progress and session resume",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "build": "python build.py"
+  }
+}

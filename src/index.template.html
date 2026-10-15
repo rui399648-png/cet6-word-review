@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>六级生词闪卡复习器</title>
+<!--__STYLES__-->
+</head>
+<body>
+<div id="banner-storage" class="banner hidden">⚠ 浏览器存储不可用（可能处于隐私模式），本次复习进度将无法保存。</div>
+<div id="toast" class="toast hidden"></div>
+
+<section id="view-home" class="view">
+  <h1>六级生词复习</h1>
+  <div id="home-books"></div>
+  <div class="row">
+    <button id="btn-open" class="primary">📂 打开生词本 (.xlsx)</button>
+    <input type="file" id="file-input" accept=".xlsx" class="hidden">
+  </div>
+  <div id="home-detail" class="hidden">
+    <div id="stat-bars"></div>
+    <details id="stat-source-wrap"><summary>按来源部分统计</summary><div id="stat-source"></div></details>
+    <p id="resume-info" class="muted hidden" aria-live="polite"></p>
+    <div class="row">
+      <button id="btn-start" class="primary">▶ 开始复习</button>
+      <button id="btn-new-session" class="hidden">重新选择范围</button>
+      <button id="btn-export">⬇ 导出打卡表格</button>
+      <button id="btn-clear" class="danger">🗑 清除进度</button>
+    </div>
+  </div>
+</section>
+
+<section id="view-scope" class="view hidden">
+  <h2>选择复习范围</h2>
+  <div id="scope-sources"></div>
+  <div id="scope-masteries"></div>
+  <label class="chk"><input type="checkbox" id="scope-mastered"> 包含已掌握的词（全部轮次已打卡）</label>
+  <div id="scope-count" class="stat-title"></div>
+  <div class="row">
+    <button id="btn-scope-start" class="primary">开始</button>
+    <button id="btn-scope-back">返回</button>
+  </div>
+</section>
+
+<section id="view-card" class="view hidden">
+  <div class="card-top">
+    <span id="card-progress"></span>
+    <span>
+      <button id="btn-review-last">回看上一张</button>
+      <button id="btn-end">结束复习</button>
+    </span>
+  </div>
+  <div id="flashcard">
+    <div id="card-front">
+      <div id="card-word"></div>
+      <div id="card-pos"></div>
+      <button id="btn-speak">🔊 发音</button>
+      <div class="hint">点击卡片或按空格翻面</div>
+    </div>
+    <div id="card-back" class="hidden">
+      <div id="card-word2"></div>
+      <div id="card-meaning"></div>
+      <div id="card-source"></div>
+      <div id="card-rounds"></div>
+      <div class="row">
+        <button id="btn-know" class="know">✅ 认识 (1)</button>
+        <button id="btn-vague" class="vague">😕 模糊 (2)</button>
+        <button id="btn-unknown" class="unknown">❌ 不认识 (3)</button>
+      </div>
+    </div>
+  </div>
+  <label id="autospeak-wrap"><input type="checkbox" id="chk-autospeak"> 翻卡自动朗读</label>
+</section>
+
+<section id="view-summary" class="view hidden">
+  <h2 id="summary-title">本轮复习完成 🎉</h2>
+  <div id="summary-body"></div>
+  <div class="row">
+    <button id="btn-again" class="primary">再复习一轮</button>
+    <button id="btn-home">返回首页</button>
+  </div>
+</section>
+
+<div id="overlay-last" class="overlay hidden">
+  <div class="overlay-box">
+    <div id="last-body"></div>
+    <button id="btn-close-last">关闭</button>
+  </div>
+</div>
+
+<!--__VENDOR__-->
+<!--__LOGIC__-->
+<!--__STORAGE__-->
+<!--__UI__-->
+</body>
+</html>

@@ -1,0 +1,14 @@
+node_modules/
+__pycache__/
+*.pyc
+tests/out/
+outputs/
+生词/
+*.jpg
+*.jpeg
+*.png
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
